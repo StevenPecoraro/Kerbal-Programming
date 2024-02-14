@@ -1,2 +1,2 @@
-# Kerbal-Programming
-# Jebadiah-to-the-Mun
+# Kerbal Programming
+# Jebadiah to the Mun
