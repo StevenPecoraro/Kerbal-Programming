@@ -17,5 +17,5 @@ Autopilot(vessel)
 Main_Ascent()
 
 Hohmann_Transfer(conn)
-circularize_at_intercept(conn)
-get_closer(conn)
+Circularize_At_Intercept(conn)
+Get_Closer(conn)

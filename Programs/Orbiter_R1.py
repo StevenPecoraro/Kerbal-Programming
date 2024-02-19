@@ -45,7 +45,7 @@ while True:
         if abs(new_turn_angle - turn_angle) > 0.5:
             turn_angle = new_turn_angle
             vessel.auto_pilot.target_pitch_and_heading(90.0 - turn_angle, 90.0)
-    check_engine(vessel)
+    Check_Engine(vessel)
     if apoapsis() > target_altitude * 0.95:
         print('Approaching target apoapsis')
         break
@@ -54,7 +54,7 @@ while True:
 vessel.control.throttle = 0.5
 
 while apoapsis() < target_altitude:
-    check_engine(vessel)
+    Check_Engine(vessel)
     pass
 
 vessel.control.throttle = 0.0

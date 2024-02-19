@@ -32,7 +32,8 @@ def apoapsis_please(vessel):
         print(vessel.orbit.apoapsis)
         time.sleep(1)
 
-
+# Countdown...
+        
 def main_func(conn):
     Autopilot(vessel)
     conn.space_center.active_vessel.control.throttle = 1.0
@@ -47,15 +48,6 @@ def main_func(conn):
     print('Launch!')
     vessel.control.activate_next_stage()
 
-
-if __name__ == '__main__':
-    run_cpu_tasks_in_parallel([
-        apoapsis_please(vessel),
-        main_func(conn),
-    ])
-
-# Countdown...
-
 # Main ascent loop
 # Gravity turn
 while True:
@@ -67,7 +59,7 @@ while True:
         if abs(new_pitch - pitch) > 0.5:
             pitch = new_pitch
             vessel.auto_pilot.target_pitch_and_heading(new_pitch, 90.0)
-    check_engine(vessel)
+    Check_Engine(vessel)
     if apoapsis() > target_apoapsis * 0.95:
         print('Approaching target apoapsis')
         break

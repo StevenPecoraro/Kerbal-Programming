@@ -36,7 +36,7 @@ def execute_burn(conn, vessel, node):
         if node.remaining_delta_v < delta_v/20:
             vessel.control.throttle = starting_burn_power/5
         vessel.auto_pilot.target_direction = node.remaining_burn_vector(rf)
-        check_engine(vessel)
+        Check_Engine(vessel)
         pass
     vessel.control.throttle = 0.0
 
